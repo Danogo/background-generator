@@ -1,9 +1,9 @@
 // ======== DOM caching =======
 const colOne    = document.querySelector('input[name="color1"]'),
     colTwo      = document.querySelector('input[name="color2"]'),
-    colorsBox   = document.querySelector('.colors'),
+    settingsBox = document.querySelector('.settings'),
     colValueBox = document.querySelector('h3'),
-    bodyBox     = document.querySelector('body');
+    bodyBox     = document.querySelector('body');  
 
 // ======= Functions (i.a. event handlers) ========
 function setColor(evt) {
@@ -15,4 +15,4 @@ function setColor(evt) {
 setColor();
 
 // ========= Event listeners ==========
-colorsBox.addEventListener('input', setColor);
+settingsBox.addEventListener('input', setColor);
