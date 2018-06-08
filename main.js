@@ -1,15 +1,18 @@
 // ======== DOM caching =======
-const colOne = document.querySelector('input[name="color1"]');
-const colTwo = document.querySelector('input[name="color2"]');
-const colors = document.querySelector(".colors");
-const colValueBox = document.querySelector("h3");
-
-// ========= Event listeners ==========
-colors.addEventListener('click', setColor);
-colValueBox.textContent = `background-image: linear-gradient(to right, ${colOne.value}, ${colTwo.value});`;
+const colOne    = document.querySelector('input[name="color1"]'),
+    colTwo      = document.querySelector('input[name="color2"]'),
+    colorsBox   = document.querySelector('.colors'),
+    colValueBox = document.querySelector('h3'),
+    bodyBox     = document.querySelector('body');
 
 // ======= Functions (i.a. event handlers) ========
 function setColor(evt) {
-    // colValueBox.innerText = `background-image: linear-gradient(to right, ${colOne.value}, ${colTwo.value});`;
-    alert(evt.target.tagName);
+    let bgCol = `linear-gradient(to right, ${colOne.value}, ${colTwo.value})`;
+    bodyBox.style.backgroundImage = bgCol;
+    colValueBox.textContent = `background-image: ${bgCol}`;
 }
+
+setColor();
+
+// ========= Event listeners ==========
+colorsBox.addEventListener('input', setColor);
