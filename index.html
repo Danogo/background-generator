@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,27 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300i,600&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="heading">
         <h1>Background Generator</h1>
     </div>
     <div class="settings">
-        <input type="color" name="color1" value="#00ff00">
-        <input type="color" name="color2" value="#00ffff">
+        <h3 class="settings__heading">Settings</h3>
+        <h4 class="settings__heading-secondary">Colors</h4>
+        <div class="settings__color">
+            <label for="col1">1</label>
+            <input type="color" name="color1" value="#0b63f4" id="col1">
+        </div>
+        <div class="settings__color">
+            <label for="col2">2</label>
+            <input type="color" name="color2" value="#1de280" id="col2">
+        </div>
     </div>
     <div class="info">
-        <h3></h3>
+        <h2></h2>
     </div>
     <script src="main.js"></script>
 </body>
+
 </html>

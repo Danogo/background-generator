@@ -2,7 +2,7 @@
 const colOne    = document.querySelector('input[name="color1"]'),
     colTwo      = document.querySelector('input[name="color2"]'),
     settingsBox = document.querySelector('.settings'),
-    colValueBox = document.querySelector('h3'),
+    colValueBox = document.querySelector('h2'),
     bodyBox     = document.querySelector('body');  
 
 // ======= Functions (i.a. event handlers) ========
