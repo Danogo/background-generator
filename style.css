@@ -1,4 +1,4 @@
-/* Base settings */
+/* Base */
 * {
     margin: 0;
     padding: 0;
@@ -38,7 +38,7 @@ h1 {
     text-shadow: .5rem 1rem 2rem #333;
 }
 
-/* Current background info */
+/* Current background infoBox */
 .info {
     position: absolute;
     top: 0;
@@ -46,11 +46,12 @@ h1 {
     transform: translateX(-50%);
     margin-top: 2rem;
     padding: 2rem;
-    box-shadow: 0 .3rem .4rem rgba(3, 3, 3, .8);
+    box-shadow: 0 .3rem .4rem rgba(3, 3, 3, .8),
+                0 .1rem .3rem rgba(3, 3, 3, .6);
     background-color: #f7f7f7;
 }
 
-/* Background settings */
+/* Settings Panel */
 .settings {
     position: absolute;
     top: 20%;
@@ -62,15 +63,13 @@ h1 {
 }
 
 .settings__heading {
-    font-size: 2rem;
-    margin-bottom: .8rem;
-    padding-bottom: .8rem;
+    font-size: 2.2rem;
 }
 
 .settings__heading::after {
     content: '';
     display: block;
-    width: 80%;
+    width: 90%;
     height: 1px;
     background-color: #333;
     margin: 0 auto;
@@ -78,11 +77,39 @@ h1 {
 }
 
 .settings__heading-secondary {
-    margin-bottom: .4rem;
+    margin: 2rem 0 1.2rem 0;
 }
 
 .settings__color {
     margin-bottom: 1rem;
+    position: relative;
+}
+
+.settings__color label {
+    margin-left: -2.2rem;
+    cursor: pointer;
+    display: block;
+}
+
+ion-icon[name='color-palette'] {
+    font-size: 24px;
+    position: absolute;
+    top: -.4rem;
+    right: 1rem;
+    transition: transform .3s ease;
+}
+
+.settings__color:hover ion-icon[name='color-palette'] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+input[type='color'] {
+    display: none;
+}
+
+.direction {
+    font-size: 2.2rem;
 }
 
 /* Media queries */
