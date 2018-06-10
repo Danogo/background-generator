@@ -1,3 +1,17 @@
+/* Usibility classes */
+/* class to hide elements taken from html5 boilerplate */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
 /* Base */
 * {
     margin: 0;
@@ -20,11 +34,10 @@ body {
 
 /* Heading */
 .heading {
-    width: 100%;
-    max-width: 114rem;
+    width: 80%;
     margin: 0 auto;
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 1.4;
@@ -32,6 +45,7 @@ body {
 
 h1 {
     font-size: 10rem;
+    max-width: 114rem;
     text-transform: uppercase;
     letter-spacing: 3.5rem;
     color: #fff;
@@ -81,7 +95,7 @@ h1 {
 }
 
 .settings__color {
-    margin-bottom: 1rem;
+    margin-bottom: .6rem;
     position: relative;
 }
 
@@ -89,12 +103,13 @@ h1 {
     margin-left: -2.2rem;
     cursor: pointer;
     display: block;
+    padding: .4rem;
 }
 
 ion-icon[name='color-palette'] {
     font-size: 24px;
     position: absolute;
-    top: -.4rem;
+    top: -.1rem;
     right: 1rem;
     transition: transform .3s ease;
 }
@@ -105,7 +120,13 @@ ion-icon[name='color-palette'] {
 }
 
 input[type='color'] {
-    display: none;
+    opacity: 0;
+}
+
+input.visuallyhidden:active + label,
+input.visuallyhidden:focus + label {
+    box-shadow: 0 .2rem .3rem rgba(3, 3, 3, .8),
+                0 .1rem .2rem rgba(3, 3, 3, .6);
 }
 
 .direction {
