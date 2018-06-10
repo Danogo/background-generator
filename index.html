@@ -28,11 +28,17 @@
             <label for="col2">color 2 <ion-icon id="palette2" name="color-palette"></ion-icon></label>
         </div>
         <div class="settings__direction">
-            <select class="direction">
-                <option value="to right" selected>&#x02192;</option>
-                <option value="to bottom">&#x02193;</option>
-                <option value="to right bottom">&#x02198;</option>
-            </select>
+            <input type="radio" class="visuallyhidden" name="direction" id="right" value="to right, " checked>
+            <label for="right"><ion-icon name="arrow-round-forward"></ion-icon></label>
+
+            <input type="radio" class="visuallyhidden" name="direction" id="bottom" value="to bottom, ">
+            <label for="bottom"><ion-icon name="arrow-round-down"></ion-icon></label>
+
+            <input type="radio" class="visuallyhidden" name="direction" id="right-bottom" value="to right bottom, ">
+            <label for="right-bottom"><ion-icon name="arrow-round-forward" class="right-bottom"></ion-icon></label>
+
+            <input type="radio" class="visuallyhidden" name="direction" id="radial" value="">
+            <label for="radial"><ion-icon name="wifi"></ion-icon></label>
         </div>
 
         <h4 class="settings__heading-secondary">Heading</h4>

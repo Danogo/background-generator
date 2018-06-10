@@ -3,7 +3,6 @@ const colOne    = document.getElementById('col1'),
     colTwo      = document.getElementById('col2'),
     colHeading  = document.getElementById('col3'),
     colHShadow  = document.getElementById('col4'),
-    bgDirection = document.querySelector('.direction'),
     pal1        = document.getElementById('palette1'),
     pal2        = document.getElementById('palette2'),
     palHdgCol   = document.getElementById('palette3'),
@@ -14,17 +13,17 @@ const colOne    = document.getElementById('col1'),
     bodyBox     = document.querySelector('body');  
 
 // ======= Functions (i.a. event handlers) ========
-// set colors to all components
+// set background and colors for all components
 function setColors() {
-    setDirection();
-    paintBackground();
+    let dObj = setDirection();
+    paintBackground(dObj);
     paintHeading();
     paintPalettes();
 }
 
 // set color for background and display information about current background
-function paintBackground() {
-    let bgCol = `linear-gradient(${direction}, ${colOne.value}, ${colTwo.value})`;
+function paintBackground(dObj) {
+    let bgCol = `${dObj.type}-gradient(${dObj.direction}${colOne.value}, ${colTwo.value})`;
     bodyBox.style.backgroundImage = bgCol;
     infoBox.textContent = `background-image: ${bgCol}`;
 }
@@ -43,9 +42,21 @@ function paintPalettes() {
     palHdgShad.style.color = colHShadow.value;
 }
 
-// set direction of linear gradient
+// set direction for gradient
 function setDirection() {
-    return direction = bgDirection.value;
+    // grab checked input
+    let bgDirection = document.querySelector('.settings__direction input[type="radio"]:checked');
+    // creating an object which contains information about gradient type and direction for linear gradient
+    let dObj = {
+        type: 'linear',
+        direction: bgDirection.value
+    };
+    // if last input is checked
+    if (!bgDirection.value) {
+        // change gradient type to radial
+        dObj.type = 'radial';
+    } 
+    return dObj;
 }
 
 setColors();
