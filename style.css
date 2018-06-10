@@ -75,6 +75,15 @@ h1 {
     background-color: #f7f7f7;
     box-shadow: .2rem .2rem .9rem rgba(3, 3, 3, .8);
     padding: 1rem .6rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.settings__box {
+    padding-top: 2.6rem;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 .settings__heading {
@@ -92,7 +101,14 @@ h1 {
 }
 
 .settings__heading-secondary {
-    margin: 2rem 0 1.2rem 0;
+    margin: 0 0 1.2rem 0;
+    width: 100%;
+}
+
+.settings__box {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
 }
 
 .settings__color {
@@ -101,10 +117,15 @@ h1 {
 }
 
 .settings__color label {
-    margin-left: -2.2rem;
     cursor: pointer;
-    display: block;
+    display: inline-block;
     padding: .4rem;
+    position: relative;
+    width: 100%;
+}
+
+.move-left {
+    margin-left: -2.4rem;
 }
 
 ion-icon[name='color-palette'] {
@@ -130,32 +151,35 @@ input[type='color'] {
                 0 .1rem .2rem rgba(3, 3, 3, .6);
 }
 
-.setting__direction {
+.settings__direction-box {
     padding: .4rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
-.settings__direction label {
+.settings__direction-box label {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-.settings__direction label ion-icon.right-bottom .icon-inner {
+.settings__direction-box label ion-icon.right-bottom .icon-inner {
     transform: rotate(45deg);
 }
 
-.settings__direction label ion-icon {
+.settings__direction-box label ion-icon {
     font-size: 2rem;
     transition: transform .3s ease;
 }
 
-.settings__direction label:hover ion-icon {
+.settings__direction-box label:hover ion-icon {
     transform: scale(1.2);
 }
 
-.settings__direction input.visuallyhidden:checked + label > ion-icon,
-.settings__direction input.visuallyhidden:active + label > ion-icon,
-.settings__direction input.visuallyhidden:focus + label > ion-icon {
+.settings__direction-box input.visuallyhidden:checked + label > ion-icon,
+.settings__direction-box input.visuallyhidden:active + label > ion-icon,
+.settings__direction-box input.visuallyhidden:focus + label > ion-icon {
     box-shadow: 0 .2rem .3rem rgba(3, 3, 3, .8),
                 0 .1rem .2rem rgba(3, 3, 3, .6);
 }
@@ -183,5 +207,26 @@ input[type='color'] {
     h1 {
         font-size: 3.5rem;
         letter-spacing: 1rem;
+    }
+
+    h3 {
+        display: none;
+    }
+
+    .info {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .settings {
+        top: auto;
+        bottom: 0;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    .settings__box {
+        color: red;
+        flex-flow: row nowrap;
     }
 }

@@ -45,7 +45,7 @@ function paintPalettes() {
 // set direction for gradient
 function setDirection() {
     // grab checked input
-    let bgDirection = document.querySelector('.settings__direction input[type="radio"]:checked');
+    let bgDirection = document.querySelector('.settings__direction-box input[type="radio"]:checked');
     // creating an object which contains information about gradient type and direction for linear gradient
     let dObj = {
         type: 'linear',
