@@ -4,3 +4,6 @@ Simple backgorund generator allowing user to change colors and gradient directio
 
 Visit site:
  <a href="https://danogo.github.io/background-generator/" target="_blank">background-generator</a> (use CTRL+click to open in new tab)
+
+ visit with kramdown
+ [generator](https://danogo.github.io/background-generator/){:target="_blank"}
