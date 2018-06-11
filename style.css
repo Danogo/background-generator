@@ -132,8 +132,12 @@ ion-icon[name='color-palette'] {
     font-size: 2.4rem;
     position: absolute;
     top: -.1rem;
-    right: 1rem;
     transition: transform .3s ease;
+}
+
+.settings__color ion-icon .icon-inner {
+    position: relative;
+    left: .5rem;
 }
 
 .settings__color:hover ion-icon[name='color-palette'] {
@@ -221,12 +225,32 @@ input[type='color'] {
     .settings {
         top: auto;
         bottom: 0;
-        margin-bottom: 2rem;
         width: 100%;
+        font-size: 2rem;;
     }
 
     .settings__box {
-        color: red;
+        flex: 1;
+        flex-flow: row wrap;
+        padding: 0;
+    }
+
+    .settings__colors-box {
+        display: flex; 
+        width: 100%;
         flex-flow: row nowrap;
+        justify-content: center;
+    }
+
+    .settings__box:nth-of-type(2) .settings__colors-box {
+        flex-flow: column nowrap;
+    }
+
+    .settings__color {
+        flex: auto;
+    }
+
+    .move-left {
+        margin-left: 0;
     }
 }
