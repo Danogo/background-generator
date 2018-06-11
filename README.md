@@ -1,4 +1,4 @@
-# background-generator
+# BACKGROUND GENERATOR
 
 Simple backgorund generator allowing user to change colors and gradient direction of background. Created for Andrei Neagoie's The Complete Web Developer in 2018: Zero to Mastery course.
 
