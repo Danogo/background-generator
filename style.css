@@ -26,7 +26,7 @@ html {
 body {
     box-sizing: border-box;
     font-size: 1.6rem;
-    min-height: 100vh;
+    height: 100vh;
     font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
     text-align: center;
     color: #333;
@@ -81,7 +81,7 @@ h1 {
 }
 
 .settings__box {
-    padding-top: 2.6rem;
+    padding-top: 2rem;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -101,7 +101,7 @@ h1 {
 }
 
 .settings__heading-secondary {
-    margin: 0 0 1.2rem 0;
+    margin: 0 0 .6rem 0;
     width: 100%;
 }
 
@@ -111,34 +111,23 @@ h1 {
     width: 100%;
 }
 
-.settings__color {
-    margin-bottom: .6rem;
-    position: relative;
-}
-
 .settings__color label {
     cursor: pointer;
     display: inline-block;
-    padding: .4rem;
+    padding: .3rem .5rem 0 .5rem;
     position: relative;
-    width: 100%;
 }
 
-.move-left {
-    margin-left: -2.4rem;
+.settings__color label span {
+    position: relative;
+    top: -.6rem;
 }
 
 ion-icon[name='color-palette'] {
     font-size: 2.4rem;
-    position: absolute;
-    top: -.1rem;
     transition: transform .3s ease;
 }
 
-.settings__color ion-icon .icon-inner {
-    position: relative;
-    left: .5rem;
-}
 
 .settings__color:hover ion-icon[name='color-palette'] {
     transform: scale(1.2);
@@ -156,6 +145,7 @@ input[type='color'] {
 }
 
 .settings__direction-box {
+    margin-top: .2rem;
     padding: .4rem;
     display: flex;
     width: 100%;
@@ -226,31 +216,30 @@ input[type='color'] {
         top: auto;
         bottom: 0;
         width: 100%;
-        font-size: 2rem;;
+        font-size: 2rem;
     }
 
     .settings__box {
-        flex: 1;
         flex-flow: row wrap;
         padding: 0;
+    }
+
+    .bg {
+        flex: 5;
+    }
+
+    .hd {
+        flex: 3;
     }
 
     .settings__colors-box {
         display: flex; 
         width: 100%;
         flex-flow: row nowrap;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .settings__box:nth-of-type(2) .settings__colors-box {
         flex-flow: column nowrap;
-    }
-
-    .settings__color {
-        flex: auto;
-    }
-
-    .move-left {
-        margin-left: 0;
     }
 }
